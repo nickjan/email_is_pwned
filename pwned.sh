@@ -8,7 +8,7 @@ curl --silent --request GET "https://haveibeenpwned.com/account/$choice" > temp.
     
 cat temp.txt | grep "Oh no"
 abc=`echo $?`
-if [ "$abc" = "0" ]; then
+if [ "$abc" == "0" ]; then
    echo " !!!!!" 
 else 
    echo "not pawned!!!!!!"
